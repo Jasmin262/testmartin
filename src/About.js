@@ -3,7 +3,7 @@ import MyJumbotron from './MyJumbotron';
 
 function About() {
     return(
-<MyJumbotron title="About" />
+<MyJumbotron body="About" />
     )
 }
 
