@@ -1,10 +1,10 @@
 import React from 'react';
 import MyJumbotron from './MyJumbotron';
 
-function Home({posts}) {
+function About() {
     return(
-<MyJumbotron title="Home" />
+<MyJumbotron title="About" />
     )
 }
 
-export default Home;
+export default About;

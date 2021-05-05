@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import MyJumbotron from './MyJumbotron';
 import Home from './Home';
+import {
+  Switch,
+  Route,
+} from "react-router-dom";
+import About from './About';
+import NavBar from './NavBar';
 
 function App() {
   const [posts, setPosts] = useState();
@@ -13,7 +18,17 @@ function App() {
     fetchPosts()}
   , []);
 
-  return <div className='App'><Home posts={posts} /></div>
+  return <div className='App'>
+  <NavBar />
+  <Switch>
+  <Route path="/about">
+    <About />
+  </Route> 
+  <Route path="/">
+    <Home posts={posts} />
+  </Route> 
+  </Switch>
+  </div>
 }
 
 export default App
