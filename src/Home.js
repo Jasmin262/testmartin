@@ -3,7 +3,7 @@ import MyJumbotron from './MyJumbotron';
 
 function Home({posts}) {
     return(
-<MyJumbotron title="Home" />
+<MyJumbotron body="Home" />
     )
 }
 
