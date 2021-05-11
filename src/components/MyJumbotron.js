@@ -2,15 +2,15 @@ import React from "react";
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Button from 'react-bootstrap/Button';
 
-function MyJumbotron({body}) {
+function MyJumbotron(props) {
   return (
     <Jumbotron>
-      <h1>Hello, world!</h1>
+      <h1>{props.title}</h1>
       <p>
-       This is the {body} component
+       {props.subTitle}
       </p>
       <p>
-        <Button href="/about" variant="primary">About</Button>
+        <Button href={props.btnLink} variant="primary">{props.btnText}</Button>
       </p>
     </Jumbotron>
   );

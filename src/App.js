@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import Home from './Home';
 import {
   Switch,
   Route,
 } from "react-router-dom";
-import About from './About';
-import NavBar from './NavBar';
+import Home from './pages/home';
+import About from './pages/about';
+import Contact from './pages/contact';
+import NavBar from './components/NavBar';
 
 function App() {
   const [posts, setPosts] = useState();
@@ -23,6 +24,9 @@ function App() {
   <Switch>
   <Route path="/about">
     <About />
+  </Route> 
+  <Route path="/contact">
+    <Contact />
   </Route> 
   <Route path="/">
     <Home posts={posts} />
